@@ -8,3 +8,6 @@
 *.synctex.gz
 *.blg
 *.lot
+*.toc
+*.bbl
+thesis-blx.bib
