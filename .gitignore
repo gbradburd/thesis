@@ -11,3 +11,5 @@
 *.toc
 *.bbl
 thesis-blx.bib
+*.fdb_latexmk
+*.fls
