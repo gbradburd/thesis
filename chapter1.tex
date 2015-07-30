@@ -1,18 +1,16 @@
 %This is an example for a chapter, additional chapter can be added in the skeleton-thesis
 %To generate the final document run latex, build and quick build commands on the skeleton-thesis file not this one.
 %This is chapter 2, the default skeleton thesis expects 2 chapters
-\chapter{Disentangling the effects of geographic and ecological isolation on genetic differentiation}
+%\chapter{Disentangling the effects of geographic and ecological isolation on genetic differentiation}
 
-\chapter{Isolation by Environment}
 \section*{Authors and Affiliations}
 \begin{flushleft}
 Gideon S. Bradburd\textsuperscript{1},\\
 Peter L. Ralph\textsuperscript{2},\\
 Graham M. Coop\textsuperscript{3},\\
-\textsuperscript{2},\\
 \bf{1,3} Center for Population Biology, Department of Evolution and Ecology, University of California, Davis, CA, USA
 \\
-\bf{3} Department of Molecular and Computational Biology, University of Southern California, Los Angeles, CA 90089\\
+\bf{2} Department of Molecular and Computational Biology, University of Southern California, Los Angeles, CA 90089\\
 \end{flushleft}
 
 %\documentclass[12pt]{article}
@@ -52,6 +50,11 @@ Graham M. Coop\textsuperscript{3},\\
 %\begin{abstract}
 %Populations can be genetically isolated both by geographic distance and by differences in their ecology or environment that decrease the rate of successful migration. Empirical studies often seek to investigate the relationship between genetic differentiation and some ecological variable(s) while accounting for geographic distance, but common approaches to this problem (such as the partial Mantel test) have a number of drawbacks. In this article, we present a Bayesian method that enables users to quantify the relative contributions of geographic distance and ecological distance to genetic differentiation between sampled populations or individuals.  We model the allele frequencies in a set of populations at a set of unlinked loci as spatially correlated Gaussian processes, in which the covariance structure is a decreasing function of both geographic and ecological distance. Parameters of the model are estimated using a Markov chain Monte Carlo algorithm.  We call this method Bayesian Estimation of Differentiation in Alleles by Spatial Structure and Local Ecology (\emph{BEDASSLE}), and have implemented it in a user-friendly format in the statistical platform R. We demonstrate its utility with a simulation study and empirical applications to human and teosinte datasets. 
 %\end{abstract}
+
+\renewcommand{\thefigure}{1.\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{1.\arabic{table}}
+\setcounter{table}{0}
 
 %\newpage
 \section*{Introduction}
@@ -507,9 +510,9 @@ and the number of generations required to accurately describe the joint posterio
 \clearpage
 
 \section*{Supplemental material}
-\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thefigure}{S1.\arabic{figure}}
 \setcounter{figure}{0}
-\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thetable}{S1.\arabic{table}}
 \setcounter{table}{0}
 
 \begin{figure}[ht!]
@@ -599,7 +602,7 @@ The dashed line denotes the line of longitude used to delimit the Himalayas.}
   \includegraphics[width=6in,height=3.4in]{figs/bedassle/suppmat_fig5.pdf}
  \caption{
 		\textmd{Heatmapped matrices showing the performance of the model at all pairwise population comparisons.  The posterior predictive p-value was defined as 
-		$1-2 \times |0.5-ecdf(F_{ST_{obs}})|$, in which $ecdf(F_{ST_{obs}})$ is the empirical cumulative probability of the observed $F_{ST}$ between two populations from a distribution defined by the posterior predictive sample for that population comparison, representing the p-value of a two-tailed t-test.  Higher p-values indicate better model fit.  Populations are enumerated on the margins, and may be referenced in SuppMat Table 1.}
+		$1-2 \times |0.5-ecdf(F_{ST_{obs}})|$, in which $ecdf(F_{ST_{obs}})$ is the empirical cumulative probability of the observed $F_{ST}$ between two populations from a distribution defined by the posterior predictive sample for that population comparison, representing the p-value of a two-tailed t-test.  Higher p-values indicate better model fit.  Populations are enumerated on the margins, and may be referenced in SuppMat Table 1.1.}
 	\bf{a)}
  		\textmd{The standard model.}
 	\bf{b)}
@@ -614,7 +617,7 @@ The dashed line denotes the line of longitude used to delimit the Himalayas.}
   \includegraphics[width=6in,height=3.4in]{figs/bedassle/suppmat_fig6.png}
  \caption{
 \textmd{Heatmapped matrices indicating the performance of the model at all pairwise population comparisons.  The posterior predictive p-value was defined as 
-		$1-2 \times |0.5-ecdf(F_{ST_{obs}})|$, in which $ecdf(F_{ST_{obs}})$ is the empirical cumulative probability of the observed $F_{ST}$ between two populations from a distribution defined by the posterior predictive sample for that population comparison, representing the p-value of a two-tailed t-test.  Higher p-values indicate better model fit.  Populations are enumerated on the margins, and may be referenced in SuppMat Table 2.}
+		$1-2 \times |0.5-ecdf(F_{ST_{obs}})|$, in which $ecdf(F_{ST_{obs}})$ is the empirical cumulative probability of the observed $F_{ST}$ between two populations from a distribution defined by the posterior predictive sample for that population comparison, representing the p-value of a two-tailed t-test.  Higher p-values indicate better model fit.  Populations are enumerated on the margins, and may be referenced in SuppMat Table 1.2.}
 	\bf{a)}
  		\textmd{The standard model.}
 	\bf{b)}
@@ -695,9 +698,24 @@ The dashed line denotes the line of longitude used to delimit the Himalayas.}
 28 & K22 Zacazonapan-Luvianos (EL Puente) (56) & 19.039 & 19.039 & 1085 & parviglumis \\ 
 29 & Acatitl\'an-El Puente (50) & 19.029 & 19.029 & 1075 & parviglumis \\ 
 30 & Queretanillo (56) & 19.551 & 19.551 & 1342 & parviglumis \\ 
-31 & Km 33.5 Temascal-Huetamo (56) & 19.483 & 19.483 & 1100 & parviglumis \\ 
+31 & Km 33.5 Temascal-Huetamo (56) & 19.483 & 19.483 & 1100 & parviglumis \\
 32 & Km 37 Temascal-Huetamo (40) & 19.464 & 19.464 & 1030 & parviglumis \\ 
-33 & Casa Blanca (km 62 Huetamo-Villa Madero) (54) & 19.161 & 19.161 & 1268 & parviglumis \\ 
+33 & Casa Blanca (km 62 Huetamo-Villa Madero) (54) & 19.161 & 19.161 & 1268 & parviglumis \\  
+   \hline
+\end{tabular}
+}
+\label{tab:zea_popdata1}
+\end{center}
+\caption{Metadata for \textit{Z. m. parviglumis} populations used in the teosinte dataset.}
+\end{table}
+
+\begin{table}
+\begin{center}
+\tiny{
+    \begin{tabular}{r@{--}lllll}
+  \hline
+  & Population name (sample size) & Latitude & Longitude & Elevation & Subspecies \\ 
+  \hline
 34 & San Antonio Tecomitl (4) & 19.217 & 19.217 & 2400 & mexicana \\ 
 35 & Ozumba (4) & 19.05 & 19.05 & 2340 & mexicana \\ 
 36 & Temamatla (6) & 19.183 & 19.183 & 2400 & mexicana \\ 
@@ -731,9 +749,9 @@ The dashed line denotes the line of longitude used to delimit the Himalayas.}
    \hline
 \end{tabular}
 }
-\label{tab:zea_popdata}
+\label{tab:zea_popdata2}
 \end{center}
-\caption{Metadata for populations used in the teosinte dataset.}
+\caption{Metadata for \textit{Z. m. mexicana} populations used in the teosinte dataset.}
 \end{table}
 
 
