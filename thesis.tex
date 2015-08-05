@@ -4,6 +4,22 @@
 % modified by Dylan Beaudette, 2006,2010
 % modified  and source uploaded to github by Alex Mandel, 2014
 % Source code available at http://github.com/wildintellect/ucdthesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Compiling Instructions:
+%	compile w/ LaTeX
+%	compile w/ bibtex
+%	compile w/ pdflatexmk
+%	compile w/ bibtex
+%	compile w/ pdflatexmk
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	TO-DO
+%	track down missing refs
+%	fix quotes and other stuff in IBE
+%	write abstract (steal from Fitch?  or DDIG?)
+%	acknowledgements (maybe remove from chapters?)
+
 \documentclass[11pt]{ucdthesis}
 %\documentclass[10pt,twoside,final]{ucdthesis}
 % \documentclass[10pt,twoside,draft]{ucdthesis}
@@ -86,7 +102,7 @@
 %\usepackage{subfigure}
 
  % PDF links --- > breaks with some bibliography entries
-% \usepackage{hyperref}
+%\usepackage{hyperref}
 
 % nice looking, parenthetical references
 \usepackage[sorting=nyt,natbib=true,citestyle=authoryear,bibstyle=authoryear,maxnames=3,refsection
@@ -209,6 +225,7 @@
 \chapter{A Spatial Framework for Understanding Population Structure and Admixture}
 \input{chapter3} %This looks for chapter3.tex
 
+\part*{\addcontentsline{toc}{part}{Bibliography}Bibliography}
 % note that the 'plainnat' style does not allow URL's in the bibtex entry
 %
 % some ideas here:
@@ -220,18 +237,17 @@
 
 
 % To enable this it will need to be added to toc so it's not in a chapter
-\printbibliography[heading=bibliography]
-
+\printbibliography[heading=none]
 % the appendix:
 % there are several sections, that don't really fit into the main chapters
 %
-\part*{\addcontentsline{toc}{part}{Appendices}Appendices}
-\appendix
+%\part*{\addcontentsline{toc}{part}{Appendices}Appendices}
+%\appendix
 
 % reset page style to fancy
 %\pagestyle{fancyplain}
 
- \input{appendix}
+% \input{appendix}
 
 
 \end{document}
