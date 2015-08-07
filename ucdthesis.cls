@@ -967,7 +967,7 @@ by\par
    {\ssp\@starttoc{lof}}\if@restonecol
     \twocolumn\fi}
 
-\def\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
+\def\l@figure{\@dottedtocline{1}{1.5em}{2.7em}}
 
 % LIST OF TABLES
 %

@@ -6,5 +6,43 @@
 % at 345 words - With electronic filing there is no longer a word limit
 
 \newcommand{\myabstract}{
-put the abstract here
-}
+\par Genetic variation provides the raw materials for both local adaptation and the formation of new species, 
+and understanding the processes generating and maintaining the diversity of living organisms 
+is a fundamental aim across all areas and levels of biological research. 
+The central question that motivated this dissertation research is: 
+what are the patterns of variation within and between populations and species, 
+and what processes, ecological and evolutionary, are generating those patterns?
+%Spatial patterns of population structure are the product of a complex history of demography and migration, 
+%and can provide valuable insights into the ecology of an organism. 
+My dissertation is focused on developing statistical methods to infer and visualize spatial patterns of genetic differentiation, 
+and provide clues about the processes that have generated them.
+%%
+\par In my first chapter, I develop a statistical method to quantify 
+the relative contributions of ecological and geographic distance to patterns of genetic differentiation.
+The method, BEDASSLE,
+%Bayesian Estimation of Differentiation in Alleles by Spatial Structure and Local Ecology (BEDASSLE), 
+models the allele frequencies in a set of populations at a set of unlinked loci 
+as spatially correlated Gaussian processes, in which the covariance structure 
+is a decreasing function of both geographic and ecological distance.
+%%
+\par In my second chapter, I discuss the conceptual framework of Isolation by Environment 
+(IBE, as opposed to Isolation by Distance, or IBD) in a review and synthesis.
+This work clearly defines IBE as a pattern, rather than a process, 
+and details the different processes that can generate a pattern of IBE.
+%%
+\par In my third chapter, I extend the statistical framework developed in the first chapter
+to quantify signals of IBD and IBE to a general method for 
+inferring and visualizing patterns of population structure. 
+This method, SpaceMix, infers, for a set of sequenced samples, 
+a map in which the distances between population locations reflect genetic, 
+rather than geographic, proximity.
+%%
+\par Together, these chapters represent an advance in the conceptual 
+and statistical framework foranalyzing spatial patterns 
+%and statistical framework for inferring, analyzing, and visualizing spatial patterns 
+of population genetic structure across landscapes.}
+%The partial Mantel test has traditionally been used to address this question; however, it was recently demonstrated to have a pathological type 1 error rate when the environment is spatially autocorrelated. The method I developed, Bayesian Estimation of Differentiation in Alleles by Spatial Structure and Local Ecology (BEDASSLE), models the allele frequencies in a set of populations at a set of unlinked loci as spatially correlated Gaussian processes, in which the covariance structure is a decreasing function of both geographic and ecological distance. I demonstrated the correct statistical behavior of this method using simulations, and applied it in teosinte, in which I estimated the contribution of elevation to population structure, and in humans, in which I estimated the effect size of the Himalayas on genetic differentiation among Eurasians. I coded this method and released it as an R package for open use by other empirical researchers.
+
+%In my second chapter, I extended the conceptual framework of Isolation by Environment (IBE, as opposed to Isolation by Distance, or IBD) in a review and synthesis. This work clearly defined IBE as a pattern, rather than a process, and detailed the different processes that can generate a pattern of IBE. I also provided a “field-guide” of the statistical methods available for quantifying IBE and considerations in designing an appropriate sampling scheme to identify its signal (and disentangle if from that of IBD).
+
+%In my third chapter, I extended the statistical framework I used previously to quantify signals of IBD and IBE to a general method for inferring and visualizing patterns of population structure. This method, SpaceMix, infers, for a set of sequenced samples, a map in which the distances between population locations reflect genetic, rather than geographic, proximity. The result is a “geogenetic” map in which the distances between populations are effective distances, indicative of the way that populations perceive the distances between themselves. Nearby populations that are genetically dissimilar (e.g. separated by a barrier) may have distant geogenetic locations, while two distant populations that are closely related (e.g., the parent and daughter populations of a recent expansion) may be geogenetic neighbors. In this spatial context, “admixture” can be thought of as the outcome of unusually long-distance gene flow; it results in relatedness between populations that is anomalously high given the distance that separates them. SpaceMix depicts the effect of admixture using arrows, from a source of admixture to its target, on the inferred map. The inferred geogenetic map is an intuitive and information-rich visual summary of patterns of population structure.
